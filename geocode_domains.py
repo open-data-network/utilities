@@ -14,5 +14,5 @@ for row in data:
         location = requests.get('http://nominatim.openstreetmap.org/search/?q=%s,usa&format=json' % (row['region_name'])).json()
     if location:
         location = location[0]
-        row['location'] = {'longitude': location['lon'], 'latitude': location['lat']} 
+        row['location'] = "(%s, %s)" % (location['lat'], location['lon'])
 client.upsert("k53q-ytmx", data)
