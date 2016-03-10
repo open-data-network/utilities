@@ -1,4 +1,5 @@
 creds.json
+*.sag*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
